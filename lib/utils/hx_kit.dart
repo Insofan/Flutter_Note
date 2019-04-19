@@ -5,7 +5,7 @@ class HXKit {
   /// 上部padding
   static const double paddingTop = 30.0;
   /// 动画时间: 秒
-  static const int durSec = 3;
+  static const int durSec = 1;
   /// 正方形边长
   static const double squLen = 100.0;
   /// 长方形宽

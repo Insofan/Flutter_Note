@@ -13,16 +13,6 @@ class AniContainer extends StatelessWidget {
       ),
     );
   }
-
-  Widget _buildAniContainer() {
-    return new AnimatedContainer(
-      color: HXKit().randColor(),
-      duration: Duration(seconds: HXKit.durSec),
-      curve: Curves.bounceIn,
-      height: HXKit.recHeight,
-      width: HXKit.recWidth,
-    );
-  }
 }
 
 class AniWidget extends StatefulWidget {
@@ -37,7 +27,7 @@ class AniWidgetState extends State<AniWidget> {
   var _height = 100.0;
   var _width = 100.0;
   var _isFirstCrossFadeEnabled = false;
-  var _opacity = 0.0;
+  var _opacity = 1.0;
 
   _aniContainer() {
     setState(() {
@@ -45,6 +35,12 @@ class AniWidgetState extends State<AniWidget> {
       _height = _height == 100 ? 200 : 100;
       _width = _width == 100 ? 200 : 100;
     });
+  }
+
+  _anipacity() {
+   setState(() {
+     _opacity = _opacity == 0 ? 1.0 : 0.0;
+   });
   }
 
   @override
@@ -57,20 +53,35 @@ class AniWidgetState extends State<AniWidget> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           AnimatedContainer(
-            duration: Duration(seconds: 1),
+            duration: Duration(seconds: HXKit.durSec),
             curve: Curves.bounceOut,
             color: _color,
             height: _height,
             width: _width,
             child: Center(
-                child: new Text('Click Animated')
+                child: new Text('Animated Container',textAlign: TextAlign.center)
             ),
           ),
           SizedBox(height: HXKit.paddingTop),
           FloatingActionButton(
             onPressed: _aniContainer,
+            backgroundColor: _color,
             child: Icon(Icons.change_history),
-          )
+          ),
+          SizedBox(height: HXKit.paddingTop),
+          AnimatedOpacity(
+            opacity: _opacity,
+            duration: Duration(seconds: HXKit.durSec),
+            child: FlutterLogo(
+              size: HXKit.squLen,
+            ),
+          ),
+          OutlineButton(
+            child: Text("Animate Opacity"),
+            onPressed: () {
+              _anipacity();
+            },
+          ),
         ],
       ),
     );
