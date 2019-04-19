@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_note/widget/widget_list.dart';
-import 'package:flutter_note/network/network_list.dart';
+import 'package:flutter_note/widget/animated_container/ani_container.dart';
 
-void main() {
-//  debugPaintSizeEnabled = true;
-  runApp(NoteApp());
-}
-
-class NoteApp extends StatelessWidget {
+class WidgetList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Flutter笔记',
-      theme: new ThemeData(primaryColor: Colors.purpleAccent),
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Flutter笔记'),
-        ),
-        // 苹果的Safe Area
-        body: SafeArea(
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Widget List'),
+      ),
+      body: SafeArea(
           child: new ItemList(),
-        ),
       ),
     );
   }
@@ -34,13 +22,11 @@ class ItemList extends StatefulWidget {
 
 class ItemListState extends State<ItemList> {
   final List<String> titleList = [
-    'Widget',
-    'Network'
+    'Animated Container',
   ];
 
   final Map<String, Widget> widgetMap = {
-    'Widget': WidgetList(),
-    'Network': NetworkList(),
+    'Animated Container': AniContainer(),
   };
 
   @override
@@ -64,8 +50,8 @@ class ItemListState extends State<ItemList> {
       ),
       onTap: () {
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => widgetMap[title])
+            context,
+            MaterialPageRoute(builder: (context) => widgetMap[title])
         );
       },
     );

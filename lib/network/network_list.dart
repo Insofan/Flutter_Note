@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NetworkListView extends StatelessWidget {
+class NetworkList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
