@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_note/widget/widget_list.dart';
 import 'package:flutter_note/network/network_list.dart';
+import 'package:flutter_note/widget/navigator_route/navigator_route.dart';
+import 'package:flutter_note/widget/navigator_route/nav_page_two.dart';
 
 void main() {
 //  debugPaintSizeEnabled = true;
@@ -14,6 +16,10 @@ class NoteApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Flutter笔记',
       theme: new ThemeData(primaryColor: Colors.purpleAccent),
+      routes: {
+        '/nav': (context) {return NavRou();},
+        '/page2': (context) {return Page2();},
+      },
       home: new Scaffold(
         appBar: new AppBar(
           title: new Text('Flutter笔记'),

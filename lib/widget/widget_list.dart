@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/widget/animated_container_opacity/ani_container.dart';
 import 'package:flutter_note/widget/floating_action_button/floating_action_button.dart';
+import 'package:flutter_note/widget/navigator_route/navigator_route.dart';
 
 
 class WidgetList extends StatelessWidget {
@@ -26,11 +27,13 @@ class ItemListState extends State<ItemList> {
   final List<String> titleList = [
     'Animated Container & Opacity',
     'Floating Action Button',
+    'Navigator Route',
   ];
 
   final Map<String, Widget> widgetMap = {
     'Animated Container & Opacity': AniContainer(),
-  'Floating Action Button': FBA(),
+    'Floating Action Button': FBA(),
+    'Navigator Route': NavRou(),
   };
 
   @override
