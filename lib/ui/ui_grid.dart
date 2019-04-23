@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/utils/hx_kit.dart';
 import 'package:flutter_note/ui/hire/hire.dart';
+import 'package:flutter_note/ui/count/count.dart';
 
 class UIGrid extends StatelessWidget {
   final List<String> _itemList = [
-      "Hire",
+    "Hire",
+    "Bloc Count"
   ];
 
   final Map<String, Widget> _widgetMap = {
     "Hire": Hire(),
+    "Bloc Count": BlocCount()
   };
 
   @override
@@ -21,11 +24,11 @@ class UIGrid extends StatelessWidget {
         child: Container(
           color: HXKit().randColor(),
           child: GridView.count(
-            padding: EdgeInsets.all(24.0),
-            mainAxisSpacing: HXKit.mainSpace,
-            crossAxisSpacing: HXKit.crossSpace,
-            crossAxisCount: HXKit.crossCount,
-             children: _itemList.map((String title) {
+              padding: EdgeInsets.all(24.0),
+              mainAxisSpacing: HXKit.mainSpace,
+              crossAxisSpacing: HXKit.crossSpace,
+              crossAxisCount: HXKit.crossCount,
+              children: _itemList.map((String title) {
                 return _buildChildren(context, title);
               }).toList()
           ),
@@ -35,7 +38,7 @@ class UIGrid extends StatelessWidget {
   }
 
   Widget _buildChildren(BuildContext context, String title) {
-    return  new  RaisedButton(
+    return new RaisedButton(
       child: Text(title),
       onPressed: () {
         Navigator.push(
