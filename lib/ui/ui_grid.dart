@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_note/utils/hx_kit.dart';
+
 import 'package:flutter_note/ui/hire/hire.dart';
 import 'package:flutter_note/ui/count/count.dart';
+import 'package:flutter_note/ui/login/login.dart';
 
 class UIGrid extends StatelessWidget {
   final List<String> _itemList = [
-    "Hire",
-    "Bloc Count"
+      "Hire",
+      "Login",
+      "Bloc Count"
   ];
 
   final Map<String, Widget> _widgetMap = {
     "Hire": Hire(),
-    "Bloc Count": BlocCount()
+    "Bloc Count": BlocCount(),
+    "Login": Login(),
   };
 
   @override
