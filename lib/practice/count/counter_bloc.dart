@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_note/ui/count/counter_event.dart';
+import 'package:flutter_note/practice/count/counter_event.dart';
 
 class CounterBloc {
   int _counter = 0;

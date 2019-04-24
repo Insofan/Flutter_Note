@@ -20,15 +20,21 @@ dev_dependencies:
   # 依赖库
   pedantic: ^1.0.0
 
+  # https://github.com/flutterchina/dio
+  dio: ^2.1.0
+
+  # rxdart https://github.com/ReactiveX/rxdart
+  rxdart: ^0.21.0
+
 flutter:
 
   uses-material-design: true
   assets:
-    - assets/facebook.png
+    - assets/picture/facebook.png
   fonts:
     - family: Montserrat
       fonts:
-      - asset: assets/Montserrat-Regular.ttf
-      - asset: assets/Montserrat-Bold.ttf
+      - asset: assets/fonts/Montserrat-Regular.ttf
+      - asset: assets/fonts/Montserrat-Bold.ttf
         weight: 700
 

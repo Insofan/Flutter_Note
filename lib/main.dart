@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
+import 'package:flutter_note/utils/hx_kit.dart';
+
 import 'package:flutter_note/widget/widget_list.dart';
-import 'package:flutter_note/network/network_list.dart';
+import 'package:flutter_note/ui/ui_grid.dart';
+import 'package:flutter_note/practice/practice_grid_page.dart';
+
 import 'package:flutter_note/widget/navigator_route/navigator_route.dart';
 import 'package:flutter_note/widget/navigator_route/nav_page_two.dart';
-import 'package:flutter_note/ui/ui_grid.dart';
 
 void main() {
 //  debugPaintSizeEnabled = true;
@@ -16,7 +20,7 @@ class NoteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter笔记',
-      theme: new ThemeData(primaryColor: Colors.purpleAccent),
+      theme: new ThemeData(primaryColor: HXKit().randColor()),
       routes: {
         '/nav': (context) {return NavRou();},
         '/page2': (context) {return Page2();},
@@ -43,13 +47,13 @@ class ItemListState extends State<ItemList> {
   final List<String> titleList = [
     'Widget',
     'UI',
-    'Network',
+    'Practice'
   ];
 
   final Map<String, Widget> widgetMap = {
     'Widget': WidgetList(),
     'UI': UIGrid(),
-    'Network': NetworkList(),
+    'Practice': PracticeGrid()
   };
 
   @override
@@ -73,8 +77,8 @@ class ItemListState extends State<ItemList> {
       ),
       onTap: () {
         Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => widgetMap[title])
+            context,
+            MaterialPageRoute(builder: (context) => widgetMap[title])
         );
       },
     );

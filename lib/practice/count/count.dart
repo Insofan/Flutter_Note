@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/ui/count/counter_bloc.dart';
-import 'package:flutter_note/ui/count/counter_event.dart';
+
 import 'package:flutter_note/utils/hx_kit.dart';
+
+import 'package:flutter_note/practice/count/counter_bloc.dart';
+import 'package:flutter_note/practice/count/counter_event.dart';
 
 class BlocCount extends StatelessWidget {
   @override
