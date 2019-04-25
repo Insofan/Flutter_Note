@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter_note/net/net_dio_util.dart';
+import 'package:flutter_note/net/net_api.dart';
 
 import 'package:flutter_note/widget/widget_list.dart';
 import 'package:flutter_note/ui/ui_grid.dart';
@@ -56,6 +59,19 @@ class ItemListState extends State<ItemList> {
     'Practice': PracticeGrid()
   };
 
+  @override
+  void initState() {
+    super.initState();
+    _initDioUtil();
+  }
+
+  /// 初始化网络请求
+  void _initDioUtil() {
+    BaseOptions baseOptions = DioUtil.getDefOptions();
+    baseOptions.baseUrl = API.baseUrl;
+    HttpConfig config = new HttpConfig(options: baseOptions);
+    DioUtil().setConfig(config);
+  }
   @override
   Widget build(BuildContext context) {
     return new ListView.separated(
