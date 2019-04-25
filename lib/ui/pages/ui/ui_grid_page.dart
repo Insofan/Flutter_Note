@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 
-import 'package:flutter_note/ui/hire/hire.dart';
-import 'package:flutter_note/ui/login/login.dart';
+import 'package:flutter_note/ui/pages/ui/layout/ui_layout_grid_page.dart';
+import 'package:flutter_note/ui/pages/ui/hire/ui_hire_page.dart';
+import 'package:flutter_note/ui/pages/ui/login/ui_login_page.dart';
 
 class UIGrid extends StatelessWidget {
   final List<String> _itemList = [
-      "Hire",
-      "Login",
+    "Hire",
+    "Login",
   ];
 
   final Map<String, Widget> _widgetMap = {
@@ -25,14 +26,16 @@ class UIGrid extends StatelessWidget {
       body: SafeArea(
         child: Container(
           color: HXKit().randColor(),
-          child: GridView.count(
-              padding: EdgeInsets.all(24.0),
-              mainAxisSpacing: HXKit.mainSpace,
-              crossAxisSpacing: HXKit.crossSpace,
-              crossAxisCount: HXKit.crossCount,
-              children: _itemList.map((String title) {
-                return _buildChildren(context, title);
-              }).toList()
+          child: GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisSpacing: HXKit.crossSpace,
+                mainAxisSpacing: HXKit.crossSpace,
+                crossAxisCount: 3,
+            ),
+            itemBuilder: (BuildContext context, int index) {
+              return _buildChildren(context, _itemList[index]);
+            },
+            itemCount: _itemList.length,
           ),
         ),
       ),
@@ -42,6 +45,7 @@ class UIGrid extends StatelessWidget {
   Widget _buildChildren(BuildContext context, String title) {
     return new RaisedButton(
       child: Text(title),
+      color: HXKit().randColor(),
       onPressed: () {
         Navigator.push(
           context,

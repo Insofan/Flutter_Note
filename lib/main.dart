@@ -4,14 +4,14 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_note/utils/hx_kit.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_note/net/net_dio_util.dart';
-import 'package:flutter_note/net/net_api.dart';
+import 'package:flutter_note/net/net_url_path.dart';
 
-import 'package:flutter_note/widget/widget_list.dart';
-import 'package:flutter_note/ui/ui_grid.dart';
-import 'package:flutter_note/practice/practice_grid_page.dart';
+import 'package:flutter_note/ui/pages/widget/widget_list.dart';
+import 'package:flutter_note/ui/pages/ui/ui_grid_page.dart';
+import 'package:flutter_note/ui/pages/practice/practice_grid_page.dart';
 
-import 'package:flutter_note/widget/navigator_route/navigator_route.dart';
-import 'package:flutter_note/widget/navigator_route/nav_page_two.dart';
+import 'package:flutter_note/ui/pages/widget/navigator_route/navigator_route.dart';
+import 'package:flutter_note/ui/pages/widget/navigator_route/nav_page_two.dart';
 
 void main() {
 //  debugPaintSizeEnabled = true;

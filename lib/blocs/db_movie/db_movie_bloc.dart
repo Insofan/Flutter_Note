@@ -1,0 +1,2 @@
+
+class DBTop250Bloc {}

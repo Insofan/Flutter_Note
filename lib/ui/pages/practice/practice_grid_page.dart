@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 
-import 'package:flutter_note/practice/count/count.dart';
-import 'package:flutter_note/practice/douba_movie/db_movie_home_page.dart';
+import 'package:flutter_note/blocs/count/count.dart';
+import 'package:flutter_note/ui/pages/practice/douba_movie/db_movie_home_page.dart';
 
 class PracticeGrid extends StatelessWidget {
   final List<String> _itemList = [

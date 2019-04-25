@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_note/widget/animated_container_opacity/ani_container.dart';
-import 'package:flutter_note/widget/floating_action_button/floating_action_button.dart';
-import 'package:flutter_note/widget/navigator_route/navigator_route.dart';
+import 'package:flutter_note/ui/pages/widget/animated_container_opacity/ani_container.dart';
+import 'package:flutter_note/ui/pages/widget/floating_action_button/floating_action_button.dart';
+import 'package:flutter_note/ui/pages/widget/navigator_route/navigator_route.dart';
 
 
 class WidgetList extends StatelessWidget {

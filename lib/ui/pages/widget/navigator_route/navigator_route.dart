@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/utils/hx_kit.dart';
-import 'package:flutter_note/widget/navigator_route/nav_page_two.dart';
+import 'package:flutter_note/ui/pages/widget/navigator_route/nav_page_two.dart';
 
 
 class NavRou extends StatefulWidget {

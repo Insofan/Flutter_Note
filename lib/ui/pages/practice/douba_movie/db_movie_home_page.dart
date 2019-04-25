@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 
-import 'package:flutter_note/practice/douba_movie/pages/db_top_250_page.dart';
-import 'package:flutter_note/practice/douba_movie/pages/db_favourite_page.dart';
-import 'package:flutter_note/practice/douba_movie/pages/db_explore_page.dart';
+import 'package:flutter_note/ui/pages/practice/douba_movie/pages/db_top_250_page.dart';
+import 'package:flutter_note/ui/pages/practice/douba_movie/pages/db_favourite_page.dart';
+import 'package:flutter_note/ui/pages/practice/douba_movie/pages/db_explore_page.dart';
 
 class DBMovieHome extends StatelessWidget {
   final List<String> _itemList = [
