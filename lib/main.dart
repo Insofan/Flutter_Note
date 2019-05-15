@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
+import 'package:elite_kit/elite_kit.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_note/net/net_dio_util.dart';
 import 'package:flutter_note/net/net_url_path.dart';
@@ -71,6 +72,11 @@ class ItemListState extends State<ItemList> {
     baseOptions.baseUrl = API.baseUrl;
     HttpConfig config = new HttpConfig(options: baseOptions);
     DioUtil().setConfig(config);
+  }
+
+  /// 初始化elite
+  void _initElite() {
+    ScreenKit.init(designW: 375, designH: 667, ableFontScale: true);
   }
   @override
   Widget build(BuildContext context) {

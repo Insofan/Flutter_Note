@@ -2,19 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 
-import 'package:flutter_note/ui/pages/ui/layout/ui_layout_grid_page.dart';
-import 'package:flutter_note/ui/pages/ui/hire/ui_hire_page.dart';
-import 'package:flutter_note/ui/pages/ui/login/ui_login_page.dart';
+import 'package:flutter_note/ui/pages/ui/layout/ui_layout_home.dart';
+
 
 class UIGrid extends StatelessWidget {
   final List<String> _itemList = [
-    "Hire",
-    "Login",
+    'Layout'
   ];
 
   final Map<String, Widget> _widgetMap = {
-    "Hire": Hire(),
-    "Login": Login(),
+    'Layout': UILayout()
   };
 
   @override
@@ -28,9 +25,8 @@ class UIGrid extends StatelessWidget {
           color: HXKit().randColor(),
           child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisSpacing: HXKit.crossSpace,
-                mainAxisSpacing: HXKit.crossSpace,
-                crossAxisCount: 3,
+                crossAxisCount: 2,
+                childAspectRatio: 1.0
             ),
             itemBuilder: (BuildContext context, int index) {
               return _buildChildren(context, _itemList[index]);

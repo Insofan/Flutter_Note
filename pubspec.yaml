@@ -26,6 +26,8 @@ dev_dependencies:
   # rxdart https://github.com/ReactiveX/rxdart
   rxdart: ^0.21.0
 
+  elite_kit: ^0.0.1
+
 flutter:
 
   uses-material-design: true

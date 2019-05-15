@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/utils/hx_kit.dart';
 
-class Hire extends StatelessWidget {
+class UILayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hire'),
+        title: Text("Layout"),
       ),
-      body: Container(
+      body: SafeArea(
+          child: Container(
         color: HXKit().randColor(),
-      ),
+      )),
     );
   }
 }
