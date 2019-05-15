@@ -75,21 +75,6 @@ class HttpConfig {
 
   String data;
 
-  /// BaseOptions:
-  ///   String method,
-  //    int connectTimeout,
-  //    int receiveTimeout,
-  //    Iterable<Cookie> cookies,
-  //    this.baseUrl,
-  //    this.queryParameters,
-  //    Map<String, dynamic> extra,
-  //    Map<String, dynamic> headers,
-  //    ResponseType responseType = ResponseType.json,
-  //    ContentType contentType,
-  //    ValidateStatus validateStatus,
-  //    bool receiveDataWhenStatusError = true,
-  //    bool followRedirects = true,
-  //    int maxRedirects = 5,
   BaseOptions options;
 }
 
@@ -179,11 +164,6 @@ class DioUtil {
     return options;
   }
 
-  /// Make http request with options.
-  /// [method] The request method.
-  /// [path] The url path.
-  /// [data] The request data
-  /// [options] The request options.
   /// <BaseRespR<T> (只返回data的request): 返回 status code msg data .
   Future<BaseResp<T>> request<T>(String method, String path,
       {data, Options options, CancelToken cancelToken}) async {
@@ -241,11 +221,6 @@ class DioUtil {
     ));
   }
 
-  /// Make http request with options.
-  /// [method] The request method.
-  /// [path] The url path.
-  /// [data] The request data
-  /// [options] The request options.
   /// <BaseRespR<T> 返回 status code msg data  Response.
   Future<BaseRespR<T>> requestR<T>(String method, String path,
       {data, Options options, CancelToken cancelToken}) async {
@@ -298,10 +273,7 @@ class DioUtil {
   }
 
 
-  /// Download the file and save it in local. The default http method is "GET",you can custom it by [Options.method].
-  /// [urlPath]: The file url.
-  /// [savePath]: The path to save the downloading file later.
-  /// [onReceiveProgress]: The callback to listen downloading progress.please refer to
+
   Future<Response> download(urlPath,
       savePath, {
         ProgressCallback onReceiveProgress,

@@ -1,5 +1,5 @@
-import 'package:flutter_note/net/net_url_path.dart';
-import 'package:flutter_note/net/net_dio_util.dart';
+import 'net_url_path.dart';
+import 'net_dio_util.dart';
 import 'package:flutter_note/models/net_model.dart';
 
 class DBRepos {

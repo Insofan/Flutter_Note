@@ -3,8 +3,8 @@ import 'package:flutter/rendering.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_note/net/net_dio_util.dart';
-import 'package:flutter_note/net/net_url_path.dart';
+import '../../../Workspace/iSchool/lightning/lib/data/net_dio_util.dart';
+import '../../../Workspace/iSchool/lightning/lib/data/net_url_path.dart';
 
 import 'package:flutter_note/ui/pages/widget/widget_list.dart';
 import 'package:flutter_note/ui/pages/ui/ui_grid_page.dart';
