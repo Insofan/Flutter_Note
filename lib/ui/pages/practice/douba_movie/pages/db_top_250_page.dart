@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 import 'package:dio/dio.dart';
-import '../../../../../../../../Workspace/iSchool/lightning/lib/data/net_dio_util.dart';
 import 'package:flutter_note/models/net_model.dart';
-import '../../../../../../../../Workspace/iSchool/lightning/lib/data/net_repos.dart';
+import 'package:flutter_note/net/net_repos.dart';
 
 class DBTop250 extends StatelessWidget {
   @override
