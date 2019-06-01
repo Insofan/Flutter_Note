@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_note/utils/hx_kit.dart';
-import 'package:flutter_note/ui/pages/widget/navigator_route/nav_page_two.dart';
+import 'package:flutter_note/widget/navigator_route/nav_page_two.dart';
 
 
 class NavRou extends StatefulWidget {
@@ -27,7 +27,6 @@ class _NavRouState extends State<NavRou> {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.hearing)
           , onPressed: () {
-//        Navigator.pushNamed(context,'/page2');
         Navigator.of(context).push(MaterialPageRoute(builder:
             (context) {
           return Page2(testData: 'Page 1 pass value');

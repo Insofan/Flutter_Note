@@ -2,25 +2,23 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_note/utils/hx_kit.dart';
 
-import 'package:flutter_note/blocs/count/count.dart';
-import 'package:flutter_note/ui/pages/practice/douba_movie/db_movie_home_page.dart';
+import 'package:flutter_note/pages/ui/layout/ui_layout_page.dart';
 
-class PracticeGrid extends StatelessWidget {
+
+class UIGrid extends StatelessWidget {
   final List<String> _itemList = [
-    "Bloc Count",
-    "Douban Movie",
+    'Layout'
   ];
 
   final Map<String, Widget> _widgetMap = {
-    "Bloc Count": BlocCount(),
-    "Douban Movie": DBMovieHome(),
+    'Layout': UILayoutPage()
   };
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Practice'),
+        title: Text('UI'),
       ),
       body: SafeArea(
         child: Container(
@@ -42,8 +40,8 @@ class PracticeGrid extends StatelessWidget {
 
   Widget _buildChildren(BuildContext context, String title) {
     return new RaisedButton(
-      color: HXKit().randColor(),
       child: Text(title),
+      color: HXKit().randColor(),
       onPressed: () {
         Navigator.push(
           context,
@@ -55,3 +53,4 @@ class PracticeGrid extends StatelessWidget {
     );
   }
 }
+

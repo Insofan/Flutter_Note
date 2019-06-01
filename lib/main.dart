@@ -7,12 +7,11 @@ import 'package:dio/dio.dart';
 import 'package:flutter_note/net/net_dio_util.dart';
 import 'package:flutter_note/net/net_url_path.dart';
 
-import 'package:flutter_note/ui/pages/widget/widget_list.dart';
-import 'package:flutter_note/ui/pages/ui/ui_grid_page.dart';
-import 'package:flutter_note/ui/pages/practice/practice_grid_page.dart';
+import 'package:flutter_note/widget/widget_list.dart';
+import 'package:flutter_note/pages/ui/ui_grid_page.dart';
 
-import 'package:flutter_note/ui/pages/widget/navigator_route/navigator_route.dart';
-import 'package:flutter_note/ui/pages/widget/navigator_route/nav_page_two.dart';
+import 'package:flutter_note/widget/navigator_route/navigator_route.dart';
+import 'package:flutter_note/widget/navigator_route/nav_page_two.dart';
 
 void main() {
 //  debugPaintSizeEnabled = true;
@@ -51,13 +50,11 @@ class ItemListState extends State<ItemList> {
   final List<String> titleList = [
     'Widget',
     'UI',
-    'Practice'
   ];
 
   final Map<String, Widget> widgetMap = {
     'Widget': WidgetList(),
     'UI': UIGrid(),
-    'Practice': PracticeGrid()
   };
 
   @override
